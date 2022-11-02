@@ -20,7 +20,7 @@
           legend: { position: 'bottom' }
         };
 
-        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart1'));
 
         chart.draw(data, options);
       }
@@ -39,7 +39,26 @@
           legend: { position: 'bottom' }
         };
 
-        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart2'));
+
+        chart.draw(data, options);
+      }
+     function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Time', 'PPM',],
+          ['1:00PM',  100,],
+          ['2:00PM',  150,],
+          ['3:00PM',  135,],
+          ['4:00PM',  121,]
+        ]);
+
+        var options = {
+          title: 'TDS VS Time',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart3'));
 
         chart.draw(data, options);
       }
@@ -47,6 +66,8 @@
   </head>
   <body>
     <h1>Water Quality Testing</h1>
-    <div id="curve_chart" style="width: 900px; height: 500px"></div>
+    <div id="curve_chart1" style="width: 900px; height: 500px"></div>
+    <div id="curve_chart2" style="width: 900px; height: 500px"></div>
+    <div id="curve_chart2" style="width: 900px; height: 500px"></div>
   </body>
 </html>
