@@ -7,15 +7,15 @@
 
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
-          ['Year', 'Sales', 'Expenses'],
-          ['2004',  1000,      400],
-          ['2005',  1170,      460],
-          ['2006',  660,       1120],
-          ['2007',  1030,      540]
+          ['Time', 'PH',],
+          ['1:00PM',  7.0,],
+          ['2:00PM',  7.1,],
+          ['3:00PM',  7.2,],
+          ['4:00PM',  6.9,]
         ]);
 
         var options = {
-          title: 'Company Performance',
+          title: 'PH VS Time',
           curveType: 'function',
           legend: { position: 'bottom' }
         };
@@ -27,9 +27,7 @@
     </script>
   </head>
   <body>
-    <h1>Testing</h1>
-    <table>
-      <row><column>has</column></row>
+    <h1>Water Quality Testing</h1>
     <div id="curve_chart" style="width: 900px; height: 500px"></div>
   </body>
 </html>
