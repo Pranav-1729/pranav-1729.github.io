@@ -1,0 +1,129 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="import" href="style.css">
+    <title>Water Monitoring Index</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+
+            <div class="navbar-header">
+                <button class="navbar-toggler" data-toggle="open-navbar1">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <a href="#">
+                    <h4>Water<span> Quality</span> Index</h4>
+                </a>
+            </div>
+
+            <div class="navbar-menu" id="open-navbar1">
+                <ul class="navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li class="navbar-dropdown">
+                        <a href="#" class="dropdown-toggler" data-dropdown="my-dropdown-id">
+                            Categories <i class="fa fa-angle-down"></i>
+                        </a>
+                        <ul class="dropdown" id="my-dropdown-id">
+                            <li><a href="#">Actions</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li class="separator"></li>
+                            <li><a href="#">Seprated link</a></li>
+                            <li class="separator"></li>
+                            <li><a href="#">One more seprated link.</a></li>
+                        </ul>
+                    </li>
+                    <li class="navbar-dropdown">
+                        <a href="#" class="dropdown-toggler" data-dropdown="blog">
+                            Blog <i class="fa fa-angle-down"></i>
+                        </a>
+                        <ul class="dropdown" id="blog">
+                            <li><a href="#">Some category</a></li>
+                            <li><a href="#">Some another category</a></li>
+                            <li class="separator"></li>
+                            <li><a href="#">Seprated link</a></li>
+                            <li class="separator"></li>
+                            <li><a href="#">One more seprated link.</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/about.html">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <!-- <li><a href="#">Signin</a></li> -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <p id="ph"></p>
+    <p id="tds"></p>
+    <p id="turbidity"></p>
+    <p id="temp"></p>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("uXS9fMhEcXKIoEuRT");
+        })();
+    </script>
+
+    <script src="liveData.js" type="text/javascript">
+    </script>
+
+    <script src="navbar.js" type="text/javascript">
+    </script>
+
+    <script src="/script.js">
+    </script>
+
+    <button>
+        <a href="https://thingspeak.com/channels/1904913/feed.csv" download="All.csv">Download All</a>
+    </button>
+
+    <button>
+        <a href="https://thingspeak.com/channels/1904913/field/1.csv" download="Ph.csv">Download PH</a>
+    </button>
+
+    <button>
+        <a href="https://thingspeak.com/channels/1904913/field/2.csv" download="TDS.csv">Download TDS</a>
+    </button>
+
+    <button>
+        <a href="https://thingspeak.com/channels/1904913/field/3.csv" download="Turbidity.csv">Download Turbidity</a>
+    </button>
+
+    <button>
+        <a href="https://thingspeak.com/channels/1904913/field/4.csv" download="Temperature.csv">Download
+            Temperature</a>
+    </button>
+
+    <table border=2 bordercolor="#000">
+        <tr>
+            <td colspan="2">
+                <h1 align="center" color="#000">Water Monitoring Index</h1>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <iframe id="graph" width="450" height="260" style="border: 1px solid #000;"
+                    src="https://thingspeak.com/channels/1904913/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
+            </td>
+            <td><iframe id="graph" width="450" height="260" style="border: 1px solid #000;"
+                    src="https://thingspeak.com/channels/1904913/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <iframe id="graph" width="450" height="260" style="border: 1px solid #000;"
+                    src="https://thingspeak.com/channels/1904913/charts/3?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
+            </td>
+            <td>
+                <iframe id="graph" width="450" height="260" style="border: 1px solid #000;"
+                    src="https://thingspeak.com/channels/1904913/charts/4?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
+            </td>
+
+</html>
